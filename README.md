@@ -1,3 +1,8 @@
+# Filter process
+1. 先根据关键词过滤掉绝大多数不符合条件的视频，youtube可以用关键词去筛选需要的条件，例如，是否知识共享，是否4k，`4k_video_parser_lazy.py`
+2. 得到的json文件还需要细筛选，因为不完全正确，用`4k_video_parser_strict.py`, 可以用filter_video.slurm
+3. 然后可以用scene_spliter.py 去划分场景。
+
 # How to Setup
 ~~~bash
 # run parser 和 filter
